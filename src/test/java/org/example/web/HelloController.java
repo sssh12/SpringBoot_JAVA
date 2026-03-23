@@ -1,6 +1,8 @@
 package org.example.web;
 
+import org.example.web.dto.HelloResponseDto;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 // @RestController는 @Controller + @ResponseBody의 역할을 함.
 // 즉, 메서드가 반환하는 문자열을 http 응답 본문에 직접 작성하도록 지시함.
@@ -12,5 +14,12 @@ public class HelloController {
     public String hello() {
         // 정확히 "hello"라는 문자열을 반환해야 테스트가 성공함.
         return "hello"; // return 값이 다르면 오류 발생
+    }
+
+    @GetMapping("/hello/dto")
+    //외부에서 api로 넘긴 파라미터를 가져오는 어노테이션
+    public HelloResponseDto helloDto(@RequestParam("name") String name,
+                                     @RequestParam("email") String email) {
+        return new HelloResponseDto(name, email);
     }
 }
