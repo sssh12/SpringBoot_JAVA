@@ -10,12 +10,13 @@ import jakarta.persistence.Id; // @Id
 import jakarta.persistence.GeneratedValue; // @GeneratedValue
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Column; // @Column
+import org.example.domain.BaseTimeEntity;
 
 @Getter // 클래스 내 모든 필드의 Getter 메서드를 자동 생성
 @NoArgsConstructor // 기본 생성자 자동 추가
 @AllArgsConstructor // 기본 생성자 자동 추가
 @Entity // 테이블과 링크될 클래스임을 나타냄
-public class Book {
+public class Book extends BaseTimeEntity {
     @Id // 해당 테이블의 pk 필드
     @GeneratedValue(strategy = GenerationType.IDENTITY) // pk의 생성 규칙을 나타냄
     private Long id;
