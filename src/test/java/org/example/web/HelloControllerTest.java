@@ -7,7 +7,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 import static org.hamcrest.Matchers.is;
 
-@WebMvcTest(controllers = HelloController.class)
+@WebMvcTest(controllers = org.example.web.dto.HelloController.class)
 public class HelloControllerTest {
     @Autowired
     private MockMvc mvc;

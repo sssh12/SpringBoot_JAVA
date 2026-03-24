@@ -1,7 +1,5 @@
 package org.example.domain.book;
 
-import org.example.domain.book.Book;
-import org.example.domain.book.BookRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

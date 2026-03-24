@@ -1,6 +1,5 @@
-package org.example.web;
+package org.example.web.dto;
 
-import org.example.web.dto.HelloResponseDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
