@@ -28,4 +28,10 @@ public class BookApiController {
     public BookResponseDto findById(@PathVariable Long id) {
         return bookService.findById(id);
     }
+
+    @DeleteMapping("/api/v1/posts/{id}")
+    public Long delete(@PathVariable Long id) {
+        bookService.delete(id);
+        return id;
+    }
 }

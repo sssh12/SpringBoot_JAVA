@@ -1,0 +1,39 @@
+{{>layout/header}}
+
+<h1>도서 수정</h1>
+<div class="col-md-12">
+    <div class="col-md-4">
+        <form>
+            <div class="form-group">
+                <label for="id"> 도서 번호 </label> <input type="text" class="form-control" id="id"
+                                                     value="{{book.id}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="isbn"> ISBN </label>
+                <input type="text" class="form-control" id="isbn" value="{{book.isbn}}">
+            </div>
+            <div class="form-group">
+                <label for="title"> 도서명 </label>
+                <input type="text" class="form-control" id="title" value="{{book.title}}">
+            </div>
+            <div class="form-group">
+                <label for="author"> 작성자 </label>
+                <input type="text" class="form-control" id="author" value="{{book.author}}">
+            </div>
+
+            <div class="form-group">
+                <label for="publisher"> 출판사 </label>
+                <textarea class="form-control" id="publisher">{{book.publisher}}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="price"> H7 </label>
+                <textarea class="form-control" id="price">{{book.price}}</textarea>
+            </div>
+        </form>
+        <button type="button" class="btn btn-primary" id="btn-update">수정</button>
+        <a href="/" role="button" class="btn btn-secondary">취소</a>
+        <button type="button" class="btn btn-danger" id="btn-delete">삭제</button>
+    </div>
+</div>
+
+{{>layout/footer}}

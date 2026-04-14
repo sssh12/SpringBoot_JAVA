@@ -16,7 +16,7 @@ import org.example.domain.BaseTimeEntity;
 @NoArgsConstructor // 기본 생성자 자동 추가
 @AllArgsConstructor // 기본 생성자 자동 추가
 @Entity // 테이블과 링크될 클래스임을 나타냄
-public class Book extends BaseTimeEntity {
+public class Book extends BaseTimeEntity { // BaseTimeEntity를 상속
     @Id // 해당 테이블의 pk 필드
     @GeneratedValue(strategy = GenerationType.IDENTITY) // pk의 생성 규칙을 나타냄
     private Long id;
